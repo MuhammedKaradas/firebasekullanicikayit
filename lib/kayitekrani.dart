@@ -1,7 +1,8 @@
-//import 'package:firabasekullanicikayit/anasayfa.dart';
-//import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firabasekullanicikayit/anasayfa.dart';
+import 'package:firabasekullanicikayit/girisekrani.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-//import 'package:fluttertoast/fluttertoast.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class KayitEkrani extends StatefulWidget {
@@ -95,6 +96,7 @@ class _KayitEkraniState extends State<KayitEkrani> {
                   child: GestureDetector(
                     onTap: () {
                       // Giriş Sayfasına Yönlendirir
+                      Navigator.push(context, MaterialPageRoute(builder: (_) => GirisEkrani()));
                     },
                     child: Text(
                       "Mevcut Bir Hesabım Bulunmakta",
@@ -119,13 +121,14 @@ class _KayitEkraniState extends State<KayitEkrani> {
         Fluttertoast.showToast(msg: "Kaydınız Başarılı...");
       });*/
 
-      /*FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: parola).then((user) {
+      FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: parola).then((user) {
         //Başarılıysa Ana Sayfaya Yönlendir
-        Navigator.push(context, MaterialPageRoute(builder: (_) =>AnaSayfa()));
+        Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) =>AnaSayfa()),
+            (Route<dynamic> route) => false);
       }).catchError((hata) {
         //Başar ısız İse Hata Mesajı Göster
         Fluttertoast.showToast(msg: hata);
-      });*/
+      });
 
     }
   }
