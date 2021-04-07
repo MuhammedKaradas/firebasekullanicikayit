@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "212783827552",
+    "project_id": "fir-kullaniciislemleri-e696c",
+    "storage_bucket": "fir-kullaniciislemleri-e696c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:212783827552:android:d5dc57e2eb32c6e5539105",
+        "android_client_info": {
+          "package_name": "com.example.firabasekullanicikayit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "212783827552-bbr5u0vcj0pv5l1buf3kpusbs2p9nh1s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA39ZObOBaAYtU30-z0bzcte2c9bPwvtN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "212783827552-bbr5u0vcj0pv5l1buf3kpusbs2p9nh1s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
