@@ -60,7 +60,9 @@ class _KayitEkraniState extends State<KayitEkrani> {
                     parola = alinanParola;
                   },
                   validator: (alinanParola) {
-                    return alinanParola.length >= 6 ? null : "Parolanız En Az 6 Karakter Olmalıdır!";
+                    return alinanParola.length >= 6
+                        ? null
+                        : "Parolanız En Az 6 Karakter Olmalıdır!";
                   },
                   obscureText: true,
                   decoration: InputDecoration(
@@ -96,7 +98,8 @@ class _KayitEkraniState extends State<KayitEkrani> {
                   child: GestureDetector(
                     onTap: () {
                       // Giriş Sayfasına Yönlendirir
-                      Navigator.push(context, MaterialPageRoute(builder: (_) => GirisEkrani()));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (_) => GirisEkrani()));
                     },
                     child: Text(
                       "Mevcut Bir Hesabım Bulunmakta",
@@ -121,15 +124,18 @@ class _KayitEkraniState extends State<KayitEkrani> {
         Fluttertoast.showToast(msg: "Kaydınız Başarılı...");
       });*/
 
-      FirebaseAuth.instance.createUserWithEmailAndPassword(email: email, password: parola).then((user) {
+      FirebaseAuth.instance
+          .createUserWithEmailAndPassword(email: email, password: parola)
+          .then((user) {
         //Başarılıysa Ana Sayfaya Yönlendir
-        Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (_) =>AnaSayfa()),
+        Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (_) => AnaSayfa()),
             (Route<dynamic> route) => false);
       }).catchError((hata) {
         //Başar ısız İse Hata Mesajı Göster
         Fluttertoast.showToast(msg: hata);
       });
-
     }
   }
 }
